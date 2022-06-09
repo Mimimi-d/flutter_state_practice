@@ -39,6 +39,9 @@ class StatefulWidgetPageState extends State<StatefulWidgetPage> {
   Widget build(BuildContext context) {
     print('called HomePageState#build');
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter Demo Home Page'),
+      ),
       body: Stack(
         children: <Widget>[
           Column(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_state_practice/state_practice/flutter_hooks/hooks_page.dart';
 import 'package:flutter_state_practice/state_practice/stateful_widget/stateful_home_page.dart';
 
 import 'widgets/navigate_button.dart';
@@ -8,6 +9,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,6 +24,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MainPage extends StatelessWidget {
+  const MainPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,6 +36,10 @@ class MainPage extends StatelessWidget {
               NavigateButton(
                 navigateTo: StatefulWidgetPage(),
                 title: 'Stateful Widget',
+              ),
+              NavigateButton(
+                navigateTo: HooksPage(),
+                title: 'Flutter Hooks Widget',
               ),
             ],
           ),
