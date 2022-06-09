@@ -38,19 +38,21 @@ class StatefulWidgetPageState extends State<StatefulWidgetPage> {
   @override
   Widget build(BuildContext context) {
     print('called HomePageState#build');
-    return Stack(
-      children: <Widget>[
-        Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          // ③ コンストラクタ経由で状態を受け渡し
-          children: <Widget>[
-            WidgetA(_count),
-            const WidgetB(),
-            WidgetC(_increment)
-          ],
-        ),
-        LoadingWidget(_isLoading)
-      ],
+    return Scaffold(
+      body: Stack(
+        children: <Widget>[
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            // ③ コンストラクタ経由で状態を受け渡し
+            children: <Widget>[
+              WidgetA(_count),
+              const WidgetB(),
+              WidgetC(_increment)
+            ],
+          ),
+          LoadingWidget(_isLoading)
+        ],
+      ),
     );
   }
 }
